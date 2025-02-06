@@ -1,4 +1,4 @@
-# vite-mobile-ts
+# vite-mobile-ts  基于vite+vue3+vant ui+typescript+pinia通用移动端模板
 
 This template should help get you started developing with Vue 3 in Vite.
 
