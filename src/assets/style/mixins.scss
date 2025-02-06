@@ -1,0 +1,128 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+%flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-end-between {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+%flex-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+%flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+%flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.flex-column {
+  @extend %flex-column;
+}
+
+.flex-center-center {
+  @extend %flex-center-center;
+}
+
+.flex-center-start {
+  @extend %flex-center-start;
+}
+
+.flex-center-between {
+  @extend %flex-center-between;
+}
+
+.flex-center-end {
+  @extend %flex-center-end;
+}
+
+.flex-end-between {
+  @extend %flex-end-between;
+}
+
+.flex-center-around {
+  @extend %flex-center-around;
+}
+
+.flex-column-between {
+  @extend %flex-column-between;
+}
+
+.flex-column-center {
+  @extend %flex-column-center;
+}
+
+@mixin flex($direction, $items, $content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $items;
+  justify-content: $content;
+}
+
+@mixin text-ellipsis($val: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $val;
+}
+
+@mixin text-ellipsis-width($val: 200) {
+  width: $val;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin transform-rotate($val: 90) {
+  transform: rotate($val);
+  -ms-transform: rotate($val);
+  /* Firefox */
+  -webkit-transform: rotate-($val);
+  /* Safari 和 Chrome */
+  -o-transform: rotate($val);
+}
